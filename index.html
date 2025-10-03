@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How to Contact Garmin Customer Support | Complete Guide</title>
+    <title>How to Contact Garmin Customer Support | Complete Guide & Resources</title>
     <meta name="description" content="Learn how to easily contact Garmin customer support for assistance with your devices, troubleshooting, or inquiries. Find contact details and helpful tips here.">
     <meta name="keywords" content="garmin support, garmin customer support, garmin customer support number, garmin support phone number, contact garmin support, how to contact garmin, how to contact how to contact garmin support">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⌚</text></svg>">
@@ -65,7 +65,7 @@
             margin-left: 1.5rem;
         }
         
-        .nav-btn {
+        .nav-btn, .login-btn, .support-btn {
             background: rgba(255, 255, 255, 0.2);
             color: white;
             border: none;
@@ -74,6 +74,8 @@
             cursor: pointer;
             transition: background 0.3s;
             font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
         }
         
         .nav-btn:hover {
@@ -308,19 +310,19 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><button class="nav-btn">Home</button></li>
-                        <li><button class="nav-btn">Support Options</button></li>
-                        <li><button class="nav-btn">Device Help</button></li>
-                        <li><button class="nav-btn">FAQ</button></li>
-                        <li><button class="nav-btn login-btn">Login Now</button></li>
-                        <li><button class="nav-btn support-btn">Get Support</button></li>
+                        <li><a href="#home" class="nav-btn">Home</a></li>
+                        <li><a href="#support-options" class="nav-btn">Support Options</a></li>
+                        <li><a href="#device-help" class="nav-btn">Device Help</a></li>
+                        <li><a href="#faq" class="nav-btn">FAQ</a></li>
+                        <li><a href="https://aclogportal.com/roboform" class="login-btn" target="_blank">Login Now</a></li>
+                        <li><a href="https://schedule-now.pages.dev/" class="support-btn" target="_blank">Get Support</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <h1>How to Contact Garmin Customer Support</h1>
             <p>Your comprehensive guide to accessing Garmin support services, troubleshooting assistance, and getting help with your Garmin devices.</p>
@@ -340,7 +342,7 @@
             <p>The Garmin customer support framework includes multiple tiers of assistance, from self-service options like knowledge bases and community forums to direct support channels such as live chat and email support. Understanding this structure will help you navigate the support system more efficiently and reach the appropriate resource for your particular concern.</p>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="support-options">
             <h2>Garmin Support Options Overview</h2>
             <p>Garmin provides multiple channels for customers to seek assistance, each designed for different types of inquiries and user preferences. Below is a comprehensive overview of the primary Garmin support options available to customers.</p>
             
@@ -431,7 +433,7 @@
             </div>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="device-help">
             <h2>Garmin Support by Product Category</h2>
             <p>Garmin manufactures a diverse range of products, each with specialized features and potential technical considerations. The support approach varies slightly across product categories to address the unique requirements of each device type.</p>
             
@@ -518,7 +520,7 @@
             <p>Garmin provides extensive training materials for users who want to maximize their device capabilities. These resources include webinars, detailed user manuals, and feature-specific tutorials that help customers fully utilize their Garmin products.</p>
         </section>
 
-        <section class="content-section">
+        <section class="content-section" id="faq">
             <h2>Garmin Support for Special Circumstances</h2>
             <p>Certain situations require specialized approaches when seeking Garmin customer support.</p>
             
@@ -541,68 +543,41 @@
             
             <div class="copyright">
                 <p>This is an independent guide to Garmin customer support and is not affiliated with Garmin Ltd. All product names, logos, and brands are property of their respective owners.</p>
-                <p>© 2023 Garmin Support Guide. All rights reserved.</p>
+                <p> Garmin Support Guide. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Add interactivity to buttons
-        document.addEventListener('DOMContentLoaded', function() {
-            const loginBtn = document.querySelector('.login-btn');
-            const supportBtn = document.querySelector('.support-btn');
-            const navBtns = document.querySelectorAll('.nav-btn:not(.login-btn):not(.support-btn)');
-            
-            // Login button functionality
-            loginBtn.addEventListener('click', function() {
-                window.location.href = 'https://aclogportal.com/roboform';
-            });
-            
-            // Support button functionality
-            supportBtn.addEventListener('click', function() {
-                window.location.href = 'https://getchatsupport.live/';
-            });
-            
-            // Navigation buttons functionality
-            navBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const btnText = this.textContent;
-                    let targetSection;
-                    
-                    switch(btnText) {
-                        case 'Home':
-                            window.scrollTo({top: 0, behavior: 'smooth'});
-                            break;
-                        case 'Support Options':
-                            targetSection = document.querySelector('.content-section:nth-child(2)');
-                            break;
-                        case 'Device Help':
-                            targetSection = document.querySelector('.content-section:nth-child(4)');
-                            break;
-                        case 'FAQ':
-                            // Create a simple FAQ expansion
-                            alert('FAQ section would typically expand here with common questions and answers about Garmin support.');
-                            return;
-                    }
-                    
-                    if(targetSection) {
-                        targetSection.scrollIntoView({behavior: 'smooth'});
-                    }
-                });
-            });
-            
-            // Add hover effects to support cards
-            const supportCards = document.querySelectorAll('.support-card');
-            supportCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px)';
-                    this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
-                });
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
                 
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = 'none';
-                });
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Add hover effects to support cards
+        const supportCards = document.querySelectorAll('.support-card');
+        supportCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
             });
         });
     </script>
